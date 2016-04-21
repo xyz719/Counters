@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C85CA2A11CC886CF005E8C24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C85CA2A01CC886CF005E8C24 /* libsqlite3.tbd */; };
 		C8759BB41CC50FA0002F0163 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8759BB31CC50FA0002F0163 /* AppDelegate.swift */; };
 		C8759BB61CC50FA0002F0163 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8759BB51CC50FA0002F0163 /* ViewController.swift */; };
 		C8759BB91CC50FA0002F0163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8759BB71CC50FA0002F0163 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C85CA2A01CC886CF005E8C24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C85CA2A21CC8871D005E8C24 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C8759BB01CC50FA0002F0163 /* Counters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8759BB31CC50FA0002F0163 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8759BB51CC50FA0002F0163 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85CA2A11CC886CF005E8C24 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 		C8759BA71CC50FA0002F0163 = {
 			isa = PBXGroup;
 			children = (
+				C85CA2A01CC886CF005E8C24 /* libsqlite3.tbd */,
 				C8759BB21CC50FA0002F0163 /* Counters */,
 				C8759BC71CC50FA0002F0163 /* CountersTests */,
 				C8759BD21CC50FA0002F0163 /* CountersUITests */,
@@ -103,6 +108,7 @@
 				C8759BBA1CC50FA0002F0163 /* Assets.xcassets */,
 				C8759BBC1CC50FA0002F0163 /* LaunchScreen.storyboard */,
 				C8759BBF1CC50FA0002F0163 /* Info.plist */,
+				C85CA2A21CC8871D005E8C24 /* Bridging-Header.h */,
 			);
 			path = Counters;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = imnu.edu.cn.Counters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -415,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = imnu.edu.cn.Counters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -485,6 +493,7 @@
 				C8759BDA1CC50FA0002F0163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8759BDB1CC50FA0002F0163 /* Build configuration list for PBXNativeTarget "CountersTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +502,7 @@
 				C8759BDD1CC50FA0002F0163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8759BDE1CC50FA0002F0163 /* Build configuration list for PBXNativeTarget "CountersUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +511,7 @@
 				C8759BE01CC50FA0002F0163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
