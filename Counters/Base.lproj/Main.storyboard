@@ -52,6 +52,9 @@
                                     <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="one:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hng-Ec-tg0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9u-xT-IoV">
                                 <rect key="frame" x="58" y="240" width="46" height="30"/>
@@ -60,6 +63,9 @@
                                     <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="two:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HR5-Bl-oVh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUu-uB-dQX">
                                 <rect key="frame" x="58" y="299" width="46" height="30"/>
@@ -68,14 +74,9 @@
                                     <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4M-Kn-ZDb">
-                                <rect key="frame" x="203" y="186" width="47" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="1分">
-                                    <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <connections>
+                                    <action selector="three:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDn-3H-3ic"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq7-Ea-9ro">
                                 <rect key="frame" x="203" y="240" width="45" height="30"/>
@@ -84,6 +85,9 @@
                                     <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="two2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ddy-q9-NV3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-pP-Mny">
                                 <rect key="frame" x="203" y="299" width="45" height="30"/>
@@ -92,6 +96,9 @@
                                     <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="three3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EU2-wN-RCi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGJ-dO-Jhc">
                                 <rect key="frame" x="109" y="366" width="102" height="30"/>
@@ -102,10 +109,25 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4M-Kn-ZDb">
+                                <rect key="frame" x="203" y="186" width="47" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1分">
+                                    <color key="titleColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.42294720099999999" green="1" blue="0.96189972930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="one1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DvR-sq-Dhb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.66538677840000005" blue="0.81955600390000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.77148669209999998" blue="0.84651743680000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="A" destination="fdx-5E-ELI" id="8nI-hl-QHI"/>
+                        <outlet property="B" destination="sJv-7h-8Ee" id="ARN-Tl-HO1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

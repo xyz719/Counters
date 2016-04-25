@@ -15,6 +15,10 @@
 		C8759BBE1CC50FA0002F0163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8759BBC1CC50FA0002F0163 /* LaunchScreen.storyboard */; };
 		C8759BC91CC50FA0002F0163 /* CountersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8759BC81CC50FA0002F0163 /* CountersTests.swift */; };
 		C8759BD41CC50FA0002F0163 /* CountersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8759BD31CC50FA0002F0163 /* CountersUITests.swift */; };
+		C8D162B41CCE4CF20060412B /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D162B31CCE4CF20060412B /* SQLiteDB.swift */; };
+		C8D162B61CCE4CFD0060412B /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D162B51CCE4CFD0060412B /* SQLTable.swift */; };
+		C8D162B81CCE4D050060412B /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D162B71CCE4D050060412B /* String-Extras.swift */; };
+		C8D162BA1CCE52680060412B /* SQLiteDB in Resources */ = {isa = PBXBuildFile; fileRef = C8D162B91CCE52680060412B /* SQLiteDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,11 @@
 		C8759BCF1CC50FA0002F0163 /* CountersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8759BD31CC50FA0002F0163 /* CountersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersUITests.swift; sourceTree = "<group>"; };
 		C8759BD51CC50FA0002F0163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D162B21CCE4CD00060412B /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = data.db; path = ../SQLiteDB/Examples/iOS/Resources/data.db; sourceTree = "<group>"; };
+		C8D162B31CCE4CF20060412B /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = ../../SQLiteDB/SQLiteDB.swift; sourceTree = "<group>"; };
+		C8D162B51CCE4CFD0060412B /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = ../../SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
+		C8D162B71CCE4D050060412B /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "../../SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
+		C8D162B91CCE52680060412B /* SQLiteDB */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SQLiteDB; path = ../SQLiteDB; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				C85CA2A01CC886CF005E8C24 /* libsqlite3.tbd */,
+				C8D162B21CCE4CD00060412B /* data.db */,
+				C8D162B91CCE52680060412B /* SQLiteDB */,
 				C8759BB21CC50FA0002F0163 /* Counters */,
 				C8759BC71CC50FA0002F0163 /* CountersTests */,
 				C8759BD21CC50FA0002F0163 /* CountersUITests */,
@@ -102,6 +113,9 @@
 		C8759BB21CC50FA0002F0163 /* Counters */ = {
 			isa = PBXGroup;
 			children = (
+				C8D162B31CCE4CF20060412B /* SQLiteDB.swift */,
+				C8D162B51CCE4CFD0060412B /* SQLTable.swift */,
+				C8D162B71CCE4D050060412B /* String-Extras.swift */,
 				C8759BB31CC50FA0002F0163 /* AppDelegate.swift */,
 				C8759BB51CC50FA0002F0163 /* ViewController.swift */,
 				C8759BB71CC50FA0002F0163 /* Main.storyboard */,
@@ -238,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D162BA1CCE52680060412B /* SQLiteDB in Resources */,
 				C8759BBE1CC50FA0002F0163 /* LaunchScreen.storyboard in Resources */,
 				C8759BBB1CC50FA0002F0163 /* Assets.xcassets in Resources */,
 				C8759BB91CC50FA0002F0163 /* Main.storyboard in Resources */,
@@ -265,6 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D162B81CCE4D050060412B /* String-Extras.swift in Sources */,
+				C8D162B41CCE4CF20060412B /* SQLiteDB.swift in Sources */,
+				C8D162B61CCE4CFD0060412B /* SQLTable.swift in Sources */,
 				C8759BB61CC50FA0002F0163 /* ViewController.swift in Sources */,
 				C8759BB41CC50FA0002F0163 /* AppDelegate.swift in Sources */,
 			);
@@ -410,7 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = imnu.edu.cn.Counters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Counters/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -422,7 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = imnu.edu.cn.Counters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Counters/Bridging-Header.h";
 			};
 			name = Release;
 		};
