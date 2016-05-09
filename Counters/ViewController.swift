@@ -9,12 +9,51 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var time:NSTimer!//建立一个计时器
     var db:SQLiteDB!
-    
-    @IBOutlet var txtUname: UITextField!
-    @IBOutlet var txtMobile: UITextField!
-    
+    @IBOutlet var txtzhudui: UITextField!
+    @IBOutlet var txtkedui: UITextField!
+    var a=0
+    var b=0
+    var x=12//分钟
+    var y=1//秒
     @IBAction func one(sender: UIButton) {
+        a=a+1
+        txtzhudui.text=("\(a)")
+        
+    }
+    @IBOutlet weak var la2: UILabel!
+    @IBOutlet weak var la1: UILabel!
+    @IBAction func two(sender: UIButton) {
+        a=a+2
+        txtzhudui.text=("\(a)")
+    }
+    @IBAction func three(sender: UIButton) {
+        a=a+3
+        txtzhudui.text=("\(a)")
+    }
+    @IBAction func one1(sender: UIButton) {
+        b=b+1
+        txtkedui.text=("\(b)")
+    }
+    @IBAction func one2(sender: UIButton) {
+        b=b+2
+        txtkedui.text=("\(b)")
+    }
+
+    @IBAction func one3(sender: UIButton) {
+        b=b+3
+        txtkedui.text=("\(b)")
+    }
+    @IBAction func start(sender: UIButton) {
+        time=NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("dec"), userInfo: nil, repeats: true)
+        txtzhudui.text="0"
+        txtkedui.text="0"
+        
+    }
+    @IBAction func stop(sender: UIButton) {
+        time.invalidate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +77,15 @@ class ViewController: UIViewController {
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
-            txtUname.text = user["uname"] as? String
-            txtMobile.text = user["mobile"] as? String
+            txtzhudui.text = user["uname"] as? String
+            txtkedui.text = user["mobile"] as? String
         }
     }
     
     //保存数据到SQLite
     func saveUser() {
-        let uname = self.txtUname.text!
-        let mobile = self.txtMobile.text!
+        let uname = self.txtzhudui.text!
+        let mobile = self.txtkedui.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
         let sql = "insert into t_user(uname,mobile) values('\(uname)','\(mobile)')"
         print("sql: \(sql)")
@@ -54,7 +93,17 @@ class ViewController: UIViewController {
         let result = db.execute(sql)
         print(result)
     }
-    
+    func dec()
+    {
+        y-=1
+        while y==0
+        {
+            x=x-1
+            y=60
+        }
+        la1.text=String(x)
+        la2.text=String(y)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
