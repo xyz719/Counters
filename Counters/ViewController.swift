@@ -62,6 +62,8 @@ class ViewController: UIViewController {
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20))")
+        db.execute("create table if not exists t_team(uid integer primary key,team1 varchar(20),team2 varchar(20))")
+        
         //如果有数据则加载
         initUser()
     }
@@ -69,6 +71,7 @@ class ViewController: UIViewController {
     //点击保存
     @IBAction func saveClicked(sender: AnyObject) {
         saveUser()
+        saveteam()
     }
     
     //从SQLite加载数据
@@ -80,19 +83,40 @@ class ViewController: UIViewController {
             txtzhudui.text = user["uname"] as? String
             txtkedui.text = user["mobile"] as? String
         }
+        //
+        
+        
+        
+    }
+    func initUser() {
+        let data = db.query("select * from t_user")
+        if data.count > 0 {
+            //获取最后一行数据显示
+            let user = data[data.count - 1]
+            txtzhudui.text = user["uname"] as? String
+            txtkedui.text = user["mobile"] as? String
+        }
+        //
+        
+        
+        
     }
     
     //保存数据到SQLite
-    func saveUser() {
-        let uname = self.txtzhudui.text!
-        let mobile = self.txtkedui.text!
+    func saveteam() {
+        let team1 = self.team1.text!
+        let team2 = self.team2.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_user(uname,mobile) values('\(uname)','\(mobile)')"
+        let sql = "insert into t_team(team1,team2) values('\(team1)','\(team2)')"
         print("sql: \(sql)")
+        
+        
+        
         //通过封装的方法执行sql
         let result = db.execute(sql)
         print(result)
     }
+    
     func dec()
     {
         y-=1
