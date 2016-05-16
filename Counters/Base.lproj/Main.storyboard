@@ -89,6 +89,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unJ-DU-ZQz"/>
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4I-11-N2v"/>
                                 </connections>
                             </button>
@@ -182,8 +183,10 @@
                     <connections>
                         <outlet property="la1" destination="fwA-GY-sm2" id="qeZ-53-46a"/>
                         <outlet property="la2" destination="Trg-pP-aIf" id="ZxH-da-5Oy"/>
-                        <outlet property="txtkedui" destination="sJv-7h-8Ee" id="lGA-7c-InJ"/>
-                        <outlet property="txtzhudui" destination="fdx-5E-ELI" id="inj-gM-tr8"/>
+                        <outlet property="team1" destination="ltJ-8Z-RVf" id="Qqv-LS-mio"/>
+                        <outlet property="team2" destination="jjg-SC-pUc" id="L6R-GW-pdc"/>
+                        <outlet property="txtkedui" destination="sJv-7h-8Ee" id="JIA-aG-PmV"/>
+                        <outlet property="txtzhudui" destination="fdx-5E-ELI" id="qSH-qA-umo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
