@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     //点击保存
     @IBAction func saveClicked(sender: AnyObject) {
         saveteam()
-        
+        saveUser()
     }
     
     //从SQLite加载数据
