@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var a=0
     var b=0
     var x=12//分钟
-    var y=1//秒
+    var y=0//秒
     @IBAction func one(sender: UIButton) {
         a=a+1
         txtzhudui.text=("\(a)")
@@ -139,12 +139,13 @@ class ViewController: UIViewController {
     
     func dec()
     {
-        y-=1
+        
         while y==0
         {
             x=x-1
             y=60
         }
+        y-=1
         la1.text=String(x)
         la2.text=String(y)
     }

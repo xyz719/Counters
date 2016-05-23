@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Counters
 //
-//  Created by 20131105808 on 16/4/18.
-//  Copyright © 2016年 20131105808. All rights reserved.
+//  Created by/Users/a20131105808/Desktop/Counters/Counters/ViewController.swift 20131105808 on 16/4/18.
+//  Copyright © 2016年 20131105808. All rights reserv/Users/a20131105808/Desktop/Counters/Counters/ViewController.swifted.
 //
 
 import UIKit
@@ -59,7 +59,14 @@ class viewViewController: UIViewController {
         
     }
     
-
+    @IBAction func clean(sender: AnyObject) {
+        let sql="DROP TABLE t_user;"
+        print("sql:\(sql)")
+        
+        let result=db.execute(sql)
+        print(result)
+    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
