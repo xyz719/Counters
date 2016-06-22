@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func stop(sender: UIButton) {
-        time.invalidate()
+        time?.invalidate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
